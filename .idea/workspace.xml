@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8c472b5-9c44-4719-8b7f-ae5559edc0b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Mysite/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mysite/network/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mysite/network/templates/network/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/templates/network/post_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mysite/network/templates/network/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/templates/network/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mysite/network/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mysite/network/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,12 +17,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/base.html">
+        <entry file="file://$PROJECT_DIR$/Mysite/network/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+            <state relative-caret-position="192">
+              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mysite/network/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/registration_view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -27,7 +55,16 @@
         <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/post_list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1488">
+              <caret line="62" column="4" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -37,8 +74,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -50,15 +87,18 @@
       <list>
         <option value="$PROJECT_DIR$/Mysite/Mysite/urls.py" />
         <option value="$PROJECT_DIR$/Mysite/network/models.py" />
-        <option value="$PROJECT_DIR$/Mysite/network/urls.py" />
         <option value="$PROJECT_DIR$/Mysite/network/migrations/templates/network/Post_List.html" />
         <option value="$PROJECT_DIR$/Mysite/network/migrations/templates/network/post_list.html" />
         <option value="$PROJECT_DIR$/Mysite/Mysite/settings.py" />
         <option value="$PROJECT_DIR$/Mysite/network/admin.py" />
         <option value="$PROJECT_DIR$/Mysite/network/templates/network/post_list.py" />
-        <option value="$PROJECT_DIR$/Mysite/network/views.py" />
         <option value="$PROJECT_DIR$/Mysite/network/templates/network/post_list.html" />
+        <option value="$PROJECT_DIR$/Mysite/network/urls.py" />
         <option value="$PROJECT_DIR$/Mysite/network/templates/network/base.html" />
+        <option value="$PROJECT_DIR$/Mysite/network/templates/forms.py" />
+        <option value="$PROJECT_DIR$/Mysite/network/forms.py" />
+        <option value="$PROJECT_DIR$/Mysite/network/views.py" />
+        <option value="$PROJECT_DIR$/Mysite/network/templates/network/registration_view.html" />
       </list>
     </option>
   </component>
@@ -73,6 +113,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,21 +143,20 @@
               <item name="Django" type="462c0819:PsiDirectoryNode" />
               <item name="Mysite" type="462c0819:PsiDirectoryNode" />
               <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Django" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django" type="462c0819:PsiDirectoryNode" />
               <item name="Mysite" type="462c0819:PsiDirectoryNode" />
               <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="network" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -128,6 +168,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dev\Django\Mysite\network" />
       <recent name="D:\Dev\Django\Mysite\network\templates\network" />
       <recent name="D:\Dev\Django\Mysite\network\static" />
     </key>
@@ -143,6 +184,16 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="base.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Django/Mysite/network/templates/network/base.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.base.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -167,16 +218,18 @@
       <workItem from="1552769324635" duration="1073000" />
       <workItem from="1552817911743" duration="167000" />
       <workItem from="1552818959344" duration="2084000" />
+      <workItem from="1552846065625" duration="2091000" />
+      <workItem from="1552851567542" duration="2981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10425000" />
+    <option name="totallyTimeSpent" value="15497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27114093" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27919462" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -229,9 +282,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Mysite/network/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Mysite/Mysite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
+        <state relative-caret-position="306">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#630#662#0" expanded="true" />
@@ -241,45 +304,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mysite/network/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="1" selection-start-line="5" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="36" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mysite/network/models.py">
+    <entry file="file://$PROJECT_DIR$/Mysite/network/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="216">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mysite/network/views.py">
+    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1488">
+          <caret line="62" column="4" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/post_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/base.html">
+    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/registration_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+        <state relative-caret-position="72">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mysite/network/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
