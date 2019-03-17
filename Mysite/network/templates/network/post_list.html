@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends "network/base.html" %}
+{% block content %}
 {% for post in posts %}
     <div class = 'container'>
         <h3>{{ post.author}}</h3>
@@ -12,5 +7,4 @@
         <h5>{{post.content }}</h5>
     </div>
 {% endfor %}
-</body>
-</html>
+{% endblock content %}
