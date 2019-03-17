@@ -1,10 +1,25 @@
 {% extends "network/base.html" %}
 {% block content %}
-{% for post in posts %}
-    <div class = 'container'>
-        <h3>{{ post.author}}</h3>
-        <br>
-        <h5>{{post.content }}</h5>
+<div class = "container">
+    <div class="row">
+        {% for post in posts %}
+        <div class="col s12 m7 l4 ">
+                <div class="card ">
+                  <div class="card-image">
+                    <img src="https://lorempixel.com/100/190/nature/6">
+                    <span class="card-title">{{post.title}}</span>
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                  </div>
+                  <div class="card-content">
+                    <p>{{post.content}}.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">  {{post.author}}</a>
+                    <a href="#"><i class="material-icons right">thumb_up</i></a>
+                  </div>
+                </div>
+              </div>
+        {% endfor %}
     </div>
-{% endfor %}
+</div>
 {% endblock content %}
