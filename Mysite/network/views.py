@@ -9,14 +9,14 @@ posts = [
         'author': 'Paritosh',
         'content': 'Hello World',
         'created_on': 'September 15, 2018',
-    }
+    },
     {
         'author': 'Pratyush',
         'content': 'Hello NIBBAS',
         'created_on': 'February 7 , 2018',
     }
 ]
-]
+
 
 class PostList(ListView):
     model = Post
