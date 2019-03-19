@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Post
 from django.views.generic import (
     ListView,
 )
-from .forms import UserRegistrrationForm
+from .forms import UserRegisterrationForm
 
 class PostList(ListView):
     model = Post
@@ -17,14 +17,14 @@ class PostList(ListView):
 
 def register(request):
     if request.method == 'POST':
-        form = UserRegistrrationForm(request.POST)
+        form = UserRegisterrationForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            message.success(request,f'Your account have been registered!,{username}')
-
+            message.success(request, f'Your account have been registered!,{username}')
+            return redirect('network:login')
     else:
-        form = UserRegistrrationForm()
+        form = UserRegisterrationForm()
     return render(request=request,
                   template_name="network/registration_view.html",
                   context={'form': form})

@@ -13,11 +13,16 @@
     <!-- Navigation bar -->    
     <nav>
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo">PaariBOII!</a>
+        <a href="{% url 'network:homepage'%}" class="brand-logo">PaariBOII!</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">User</a></li>
-        <li><a href="#">Components</a></li>
-        <li><a href="#">Logout</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="#">{{ user.username }}</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="{% url 'network:logout'%}?next=/" on onclick="M.toast({html: 'logged out'})">Logout</a></li>
+            {% else%}
+            <li><a href="{% url 'network:register'%}">Register</a></li>
+            <li><a href="{% url 'network:login'%}">Login</a></li>
+            {% endif %}
         </ul>
     </div>
     </nav>

@@ -1,0 +1,18 @@
+{% extends "network/base.html"%}
+
+{% block content %}
+<div class ="container s12 m8 l6">
+    <form method = "POST">
+        {% csrf_token %}
+        <fieldset>
+             {{form}}
+        </fieldset>
+        <div class = "form-group">
+            <button class="waves-effect waves-light btn-small"><i class="material-icons right">send</i>Login</button>
+        </div>
+    </form>
+</div>
+<div class="container">
+    if you don't have a account sign-up <a href ="{% url 'network:register'%}"><strong> here </strong></a> instead.
+</div>
+    {% endblock%}

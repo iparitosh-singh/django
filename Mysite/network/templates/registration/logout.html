@@ -1,0 +1,10 @@
+{% extends "network/base.html"%}
+
+{% block content %}
+<div class="container">
+    <h2>You have been logged out </h2>
+    <div>
+        go back to <strong><a href="{% url 'homepage'%}">homepage</a></strong> or  <strong><a href="{% url 'login'%}">login</a></strong>
+    </div>
+</div>
+{% endblock%}
