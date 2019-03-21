@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
-from .models import Post
+from .models import Post, Profile
 from django.contrib import messages
 from django.views.generic import (
-    ListView,
+    ListView,DetailView
 )
 from .forms import UserRegisterrationForm
 
@@ -30,3 +30,5 @@ def register(request):
                   template_name="network/registration_view.html",
                   context={'form': form})
 
+class ProfileDetail(DetailView):
+    model = Profile

@@ -22,7 +22,7 @@
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if user.is_authenticated %}
-            <li><a class="waves-effect" href="#Profile">{{ user.username }}</a></li>
+            <li><a class="waves-effect" href="{% url 'network:profile_detail' user.profile.id %}">{{ user.username }}</a></li>
             <li><a class="waves-effect" href="#AboutPage">About</a></li>
             <li><a class="waves-effect" href="{% url 'network:logout'%}?next=/" on onclick="M.toast({html: 'logged out'})">Logout</a></li>
             {% else%}
@@ -47,7 +47,7 @@
       <a href="#email"><span class="white-text email">{{ user.email }}</span></a>
 
     </div></li>
-    <li><a class="waves-effect" href="#Profile"><i class="material-icons">person</i>Profile</a></li>
+    <li><a class="waves-effect" href="{% url 'network:profile_detail' user.profile.id %}"><i class="material-icons">person</i>Profile</a></li>
     <li><a class="waves-effect" href="{% url 'network:logout'%}?next=/"><i class="material-icons">exit_to_app</i> Logout</a></li>
       {% else%}
       <li><a class="waves-effect" href="{% url 'network:register'%}"><i class="material-icons">person_add</i>Register</a></li>
