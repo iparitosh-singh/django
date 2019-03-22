@@ -9,13 +9,14 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
+<body>
 
     <!-- Navigation bar -->    
     <nav class="indigo darken-2">
     <div class="nav-wrapper">
 
         <div class="container">
-            <a href="{% url 'network:homepage'%}" class="brand-logo">PaariBOII!</a>
+            <a href="{% url 'network:homepage'%}" data-target="slide-out" class="brand-logo">PaariBOII!</a>
             <a href="#" data-target="slide-out" class="left sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
 
@@ -31,22 +32,17 @@
             {% endif %}
         </ul>
     </div>
-    </nav>
-    <!--Navigation bar end-->
-
-
-
-  <ul id="slide-out" class="sidenav">
+        <ul id="slide-out" class="sidenav">
     <li><div class="user-view">
       <div class="background">
-        <img src="/media/default_cover.jpg">
+        <img src="{{ user.profile.profile_cover.url }}">
       </div>
         {% if user.is_authenticated%}
-      <a href="#user"><img class="circle" src="/media/default_profile.jpg"></a>
+      <a href="#user"><img class="circle" src="{{ user.profile.image.url }}"></a>
       <a href="#name"><span class="white-text name">{{ user.username }}</span></a>
       <a href="#email"><span class="white-text email">{{ user.email }}</span></a>
-
-    </div></li>
+    </div>
+    </li>
     <li><a class="waves-effect" href="{% url 'network:profile_detail' user.profile.id %}"><i class="material-icons">person</i>Profile</a></li>
     <li><a class="waves-effect" href="{% url 'network:logout'%}?next=/"><i class="material-icons">exit_to_app</i> Logout</a></li>
       {% else%}
@@ -57,13 +53,19 @@
     <li><a class="waves-effect" href="#"><i class="material-icons">info</i>About Me</a></li>
        {% endif%}
 </ul>
+    </nav>
+    <!--Navigation bar end-->
+
+
+
+
 
 
     {% block content %}
     {% endblock %}
 
 
-
+    <!--scripts-->
     <script> https://code.jquery.com/jquery-3.3.1.min.js</script>
     <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
     <script type="text/javascript">

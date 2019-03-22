@@ -1,19 +1,22 @@
 {% extends "network/base.html"%}
 {% block content %}
-<div class ="container s12 m4 l4 offset-l10">
 
-        <div class="container">
-      <div class="background">
-        <img src="{{ object.profile_cover.url }}">
-      </div>
-      <a href="#user"><img class="circle" src="{{ object.image.url }}"></a>
-      <a href="#name"><span class="white-text name">{{ object.user.username}}</span></a>
-      <a href="#email"><span class="white-text email">{{ object.user.email }}</span></a>
+
+<div class = "container">
+    <div class="col s12 m7 l3">
+        <div class="card">
+          <div class="card-image">
+              <img src="{{ object.profile_cover.url }}" class="background" style="width:500px; hieght:500px">
+              <a href="#user"><img  style="border-radius: 50%;width:50px; hieght:50px" src="{{ object.image.url }}"></a>
+              <a href="#name"><span class="black-text name card-title" >{{ object.user.username}}</span></a>
+        </div>
+            <a href="#email"><span class="black-text email">{{ object.user.email }}</span></a>
     </div>
+</div>
         {% if user == profile.user %}
-        <button class="waves-effect indigo darken-3 btn-small btn-floating circle"><i class="material-icons">edit</i> </button>
+        <button class="waves-effect indigo darken-3 btn-small btn-floating circle btn-tooltipped" data-position = "bottom" data-tooltip = "Edit Profile">
+            <i class="material-icons">edit</i>
+        </button>
         {% endif%}
     </div>
-
-
 {% endblock%}

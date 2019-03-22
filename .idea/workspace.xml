@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8c472b5-9c44-4719-8b7f-ae5559edc0b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Mysite/media/post_pics/DSC_0106.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mysite/media/default_cover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mysite/media/default_profile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/media/default_profile.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mysite/network/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mysite/network/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mysite/network/templates/network/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/templates/network/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mysite/network/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mysite/network/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mysite/network/templates/network/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/templates/network/post_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mysite/network/templates/network/profile_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mysite/network/templates/network/profile_detail.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,25 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mysite/network/models.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/profile_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="138">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mysite/network/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="13" column="85" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,26 +34,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/profile_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="342">
+              <caret line="67" column="18" lean-forward="true" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/registration_view.html">
+        <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/post_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="32" />
+            <state relative-caret-position="483">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -99,11 +77,11 @@
         <option value="$PROJECT_DIR$/Mysite/network/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/Mysite/network/signals.py" />
         <option value="$PROJECT_DIR$/Mysite/Mysite/settings.py" />
-        <option value="$PROJECT_DIR$/Mysite/network/templates/network/post_list.html" />
         <option value="$PROJECT_DIR$/Mysite/network/views.py" />
         <option value="$PROJECT_DIR$/Mysite/network/admin.py" />
-        <option value="$PROJECT_DIR$/Mysite/network/models.py" />
         <option value="$PROJECT_DIR$/Mysite/network/urls.py" />
+        <option value="$PROJECT_DIR$/Mysite/network/models.py" />
+        <option value="$PROJECT_DIR$/Mysite/network/templates/network/post_list.html" />
         <option value="$PROJECT_DIR$/Mysite/network/templates/network/base.html" />
         <option value="$PROJECT_DIR$/Mysite/network/templates/network/profile_detail.html" />
       </list>
@@ -120,7 +98,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +141,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,16 +237,17 @@
       <workItem from="1553092783236" duration="4480000" />
       <workItem from="1553195197732" duration="2187000" />
       <workItem from="1553202202098" duration="2311000" />
+      <workItem from="1553283221661" duration="4566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42834000" />
+    <option name="totallyTimeSpent" value="47400000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21677852" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -282,8 +261,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32941177" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2382353" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2382353" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -293,6 +272,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Mysite/network/apps.py">
@@ -347,13 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/post_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mysite/network/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -381,20 +379,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/base.html">
+    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/registration_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mysite/network/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state>
+          <caret selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -408,17 +396,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/registration_view.html">
+    <entry file="file://$PROJECT_DIR$/Mysite/network/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="32" />
+        <state relative-caret-position="293">
+          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="67" column="18" lean-forward="true" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/post_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mysite/network/templates/network/profile_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="138">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

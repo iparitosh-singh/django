@@ -27,11 +27,17 @@ class Profile(models.Model):
         super(Profile, self).save(*args,**kwargs)
 
         img = Image.open(self.image.path)
+        img1 =Image.open(self.profile_cover.path)
 
         if img.height > 300 or img.width > 300:
             output_size = (300, 300)
             image.thumbnail(output_size)
             image.save(self.image.path)
+
+        if img1.height > 200 or img1.width > 200:
+            output_size = (300, 300)
+            profile_cover.thumbnail(output_size)
+            profile_cover.save(self.profile_cover.path)
 
 
 
