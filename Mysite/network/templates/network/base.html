@@ -43,6 +43,7 @@
       <a href="#email"><span class="white-text email">{{ user.email }}</span></a>
     </div>
     </li>
+    <li><a class="waves-effect" href="{% url 'network:post_create'%}"><i class="material-icons">add</i>Add Post</a></li>
     <li><a class="waves-effect" href="{% url 'network:profile_detail' user.profile.id %}"><i class="material-icons">person</i>Profile</a></li>
     <li><a class="waves-effect" href="{% url 'network:logout'%}?next=/"><i class="material-icons">exit_to_app</i> Logout</a></li>
       {% else%}
@@ -55,15 +56,8 @@
 </ul>
     </nav>
     <!--Navigation bar end-->
-
-
-
-
-
-
     {% block content %}
     {% endblock %}
-
 
     <!--scripts-->
     <script> https://code.jquery.com/jquery-3.3.1.min.js</script>

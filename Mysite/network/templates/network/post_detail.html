@@ -1,0 +1,29 @@
+{% extends "network/base.html"%}
+{% block content %}
+
+
+<div class="row">
+<div class = "container">
+    <div class="card large">
+      <div class="card-image">
+        <img src = {{ object.image.url }}>
+          <span class="card-title black-text"><b>{{ object.title}}</b></span>
+      </div>
+        <div class="card-content black-text">
+          <p>{{ object.content }}</p>
+        </div>
+        {% if object.author == user %}
+        <div class="card-action">
+          <a href="{% url 'network:post_update' object.id %}">Update</a>
+          <a href="{% url 'network:post_delete' object.id %}">Delete</a>
+        </div>
+        {% else %}
+        <div class="card-action">
+          <a href="#">Like</a>
+          <a href="#">Comment</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock%}
