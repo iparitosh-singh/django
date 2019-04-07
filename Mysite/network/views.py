@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect
 from .models import Post, Profile
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
@@ -9,7 +10,9 @@ from django.views.generic import (
     CreateView,
     DeleteView,
 )
-from .forms import UserRegisterrationForm
+from .forms import UserRegisterrationForm, Post_Create_Form
+
+
 
 class PostList(ListView):
     model = Post
@@ -29,6 +32,21 @@ class PostCreateView(LoginRequiredMixin,CreateView):
     model = Post    
     fields = ['title', 'content','image']
 
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+  
+
+# def post_create(request):
+#     if  request.method == 'POST':
+#         form = Post_Create_Form(request.POST, request.FILES)
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponseRedirect('network:post_detail')
+#     else:
+#         form = Post_Create_Form()
+#     return render(request, 'network/post_form.html', {'form': form})
 
 class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
     model = Post

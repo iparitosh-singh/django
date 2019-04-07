@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class ="container s12 m8 l6">
-    <form method = "POST">
+    <form method = "POST" enctype="multipart/form-data">
         {% csrf_token %}
         <legend>Post</legend>
         <fieldset>
