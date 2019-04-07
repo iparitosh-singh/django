@@ -33,7 +33,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete = models.CASCADE, default =1)
     image = models.ImageField(default ='default_profile.jpg', upload_to ='profile_pics')
     profile_cover = models.ImageField(default='default_cover_pic.jpg', upload_to='cover_pics')
-    bio = models.TextField(max_length = 288)
+    bio = models.TextField(max_length = 288, blank= True)
 
     def __str__(self):
         return f'{self.user.username}\'s Profile'
@@ -53,6 +53,9 @@ class Profile(models.Model):
             output_size = (300, 300)
             img1.thumbnail(output_size)
             img1.save(self.profile_cover.path)
+    
+    def get_absolute_url(self):
+        return reverse('network:profile_detail', kwargs={'pk':self.pk})
         
         
 

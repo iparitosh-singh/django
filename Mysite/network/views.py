@@ -38,15 +38,7 @@ class PostCreateView(LoginRequiredMixin,CreateView):
         return super().form_valid(form)
   
 
-# def post_create(request):
-#     if  request.method == 'POST':
-#         form = Post_Create_Form(request.POST, request.FILES)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponseRedirect('network:post_detail')
-#     else:
-#         form = Post_Create_Form()
-#     return render(request, 'network/post_form.html', {'form': form})
+
 
 class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
     model = Post
@@ -65,6 +57,7 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
 class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/'
+    
     def test_func(self):
         post = self.get_object()
         if self.request.user  == post.author:
@@ -93,3 +86,17 @@ def register(request):
 
 class ProfileDetail(DetailView):
     model = Profile
+
+class ProfileUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
+    model = Profile
+    fields = ['image', 'profile_cover','bio']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+    
+    def test_func(self):
+        profile = self.get_object()
+        if self.request.user  == profile.user:
+            return True
+        return False

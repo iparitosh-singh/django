@@ -13,9 +13,9 @@
             <a href="#email"><span class="black-text email">{{ object.user.email }}</span></a>
     </div>
 </div>
-        {% if user == profile.user %}
+        {% if user == object.user %}
         <button class="waves-effect indigo darken-3 btn-small btn-floating circle btn-tooltipped" data-position = "bottom" data-tooltip = "Edit Profile">
-            <i class="material-icons">edit</i>
+            <a href = "{% url 'network:profile_update' object.id %}"><i class="material-icons" >edit</i></a>
         </button>
         {% endif%}
     </div>

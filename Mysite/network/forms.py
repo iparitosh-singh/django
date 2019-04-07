@@ -13,5 +13,4 @@ class Post_Create_Form(forms.Form):
     class Meta:
         model = Post
         fields = ['title','content', 'author', 'image']
-    def save(self):
-        self.instance.save()
+        
