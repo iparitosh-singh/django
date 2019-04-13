@@ -1,8 +1,9 @@
 {% extends "network/base.html" %}
 {% block content %}
 
-<div class = "container">
-<div class="row">
+
+<div class = row>
+<div class = "col s12 m8 offset-m1 x17 offset-l1">
       {% for post in posts %}
             <div class = "col s12 m6 l4">
                 <div class="card medium">
@@ -12,14 +13,15 @@
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">{{post.title}}
                            
-                            <i href= "#" class="material-icons right">more_vert</i></span>
+                            <i href= "#" class="material-icons right tooltipped" data-position="bottom" data-tooltip="Open Card">more_vert</i></span>
                         <p><a href="{% url 'network:profile_detail' post.author.profile.id %}">{{post.author.username}}</a></p>
                         <br>
-                        <p><a href = "{% url 'network:post_detail' post.id %}"><i class = "material-icons">details</i></a>  
+                        <p class = "card-action"><a href = "{% url 'network:post_detail' post.id %}"><i class = "material-icons">details</i></a>  
+                        <small class = ".bottomleft">{{ post.created_on}}</small>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
-                        {{post.title}}<i class="material-icons right">close</i>
+                        {{post.title}}<i class="material-icons right tooltipped" data-position="Up" data-tooltip="Close">close</i>
                         </span>
 
                         <p>{{post.content}}</p>
@@ -29,7 +31,20 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+        <div class="col hide-on-small-only m3 X13 offset-x11">
+            <div class="col hide-on-small-only m3 xl3 offset-xl1">
+                <div class="toc-wrapper">
+                    <div style="height: 1px;">
+                        <ul class="section table-of-contents">
+                            <li><a href="#materialdesign">Paritosh Singh</a></li>
+                            <li><a href="#team">Made this website</a></li>
+                            <li><a href = "#paritosh">Bow down to the king </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
     {% if user.is_authenticated %}
     <div class = "right hide-on-med-and-down">
         <a class="btn-floating btn-large waves-effect waves-light indigo darken-3" href = {% url 'network:post_create'%} style = "position: fixed; bottom: 50px;right: 50px;" >

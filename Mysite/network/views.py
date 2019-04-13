@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
 from .models import Post, Profile
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
@@ -13,10 +12,9 @@ from django.views.generic import (
 from .forms import UserRegisterrationForm, Post_Create_Form
 
 
-
 class PostList(ListView):
     model = Post
-    context_object_name ='posts'
+    context_object_name = 'posts'
     ordering = ['-created_on']
     paginated_by = 10
 
@@ -24,25 +22,23 @@ class PostList(ListView):
     # <app>/<model>_<viewtype>
 #here it will be templates/network/Post_List.html
 
+
 class PostDetail(DetailView):
     model = Post
+    
 
-
-class PostCreateView(LoginRequiredMixin,CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post    
-    fields = ['title', 'content','image']
-
+    fields = ['title', 'content', 'image']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
   
 
-
-
-class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['title', 'content','image']
+    fields = ['title', 'content', 'image']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -50,7 +46,7 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
     
     def test_func(self):
         post = self.get_object()
-        if self.request.user  == post.author:
+        if self.request.user == post.author:
             return True
 
 
@@ -60,13 +56,11 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
     
     def test_func(self):
         post = self.get_object()
-        if self.request.user  == post.author:
+        if self.request.user == post.author:
             return True
         return False
 
         
-
-
 def register(request):
     if request.method == 'POST':
         form = UserRegisterrationForm(request.POST)
@@ -82,14 +76,18 @@ def register(request):
                   context={'form': form})
 
 
-
-
 class ProfileDetail(DetailView):
     model = Profile
 
-class ProfileUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['posts'] = Post.objects.all()
+        return context
+
+
+class ProfileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Profile
-    fields = ['image', 'profile_cover','bio']
+    fields = ['image', 'profile_cover', 'bio']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -97,6 +95,6 @@ class ProfileUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     
     def test_func(self):
         profile = self.get_object()
-        if self.request.user  == profile.user:
+        if self.request.user == profile.user:
             return True
         return False

@@ -19,4 +19,39 @@
         </button>
         {% endif%}
     </div>
+    <br>
+    <h5>Posts By {{ object.user.username}}</h5>
+    <div class="container col s12 m7 l3">
+     {% for post in posts %}
+     {% if object.user == post.author%}
+            <div class = "col s12 m6 l4">
+                <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="{{post.image.url}}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{post.title}}
+                           
+                            <i href= "#" class="material-icons right tooltipped" data-position="bottom" data-tooltip="Open Card">more_vert</i></span>
+                        <p><a href="{% url 'network:profile_detail' post.author.profile.id %}">{{post.author.username}}</a></p>
+                        <br>
+                        <p class = "card-action"><a href = "{% url 'network:post_detail' post.id %}"><i class = "material-icons">details</i></a>  
+                        <small class = ".bottomleft">{{ post.created_on}}</small>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                        {{post.title}}<i class="material-icons right tooltipped" data-position="Up" data-tooltip="Close">close</i>
+                        </span>
+
+                        <p>{{post.content}}</p>
+                                           
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+    </div>
+    
+
+<div>
 {% endblock%}
