@@ -13,7 +13,8 @@ urlpatterns = [
     path('post/<int:pk>/update', user_views.PostUpdateView.as_view(), name = 'post_update'),
     path('post/<int:pk>/delete', user_views.PostDeleteView.as_view(), name = 'post_delete'),
 
-
+    #path('login_test/',user_views.login_register, name ="test_register"),
+    path('testing/',user_views.login_register, name ="test_view"),
 
     path('register/', user_views.register, name="register"),
     path('login/',auth_views.LoginView.as_view(), name="login"),    #we can add the template path manually in as_view()

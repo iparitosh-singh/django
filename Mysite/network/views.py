@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Post, Profile
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 from django.views.generic import (
     ListView,
     DetailView,
@@ -9,7 +12,7 @@ from django.views.generic import (
     CreateView,
     DeleteView,
 )
-from .forms import UserRegisterrationForm, Post_Create_Form
+from .forms import UserRegisterrationForm, Post_Create_Form, UserLoginForm
 
 
 class PostList(ListView):
@@ -98,3 +101,40 @@ class ProfileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == profile.user:
             return True
         return False
+
+def login_register(request):
+    context = {}
+    form_reg = UserRegisterrationForm(request.POST)
+    form_log = UserLoginForm(request.POST)
+    if request.method == "POST":
+        if request.POST.get('submit') == 'sign_up':
+            if form_reg.is_valid():
+                user = form_reg.save()
+                user.save()
+                username = form_reg.cleaned_data.get('username')
+                raw_password = form.cleaned_data.get('password1')
+                user = authenticate(username=user.username, password=raw_password)
+                login(request, user)
+                messages.success(request, f'Your account have been registered!,{username}')
+                return redirect('network:homepage')
+            
+    
+        elif request.POST.get('submit') == 'sign_in':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username = username, password = password)
+
+            if user is not None:
+                login(request, user)
+                return HttpResponseRedirect(reverse('network:homepage'))
+            
+            else:
+                form = UserLoginForm()
+                context["error"] = "Provide valid credentials"
+                return render(request, "network:test_register")
+        
+    return render(request,"network/bothpage.html", {'form_reg' : form_reg, 'form_log': form_log})
+
+
+def test_view(request):
+    return render(request,"network/bothpage.html" )

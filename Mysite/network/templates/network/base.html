@@ -4,6 +4,8 @@
     <title>Website Nigga</title>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {% comment %} <link type="text/css" rel="stylesheet" href="{% static 'css/style.css'%}"  media="screen,projection"/> {% endcomment %}
+        
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css'%}"  media="screen,projection"/>
   
@@ -13,7 +15,7 @@
 <body>
 
     <!-- Navigation bar -->    
-    <nav class="indigo darken-2">
+    <nav class="red">
     <div class="nav-wrapper">
 
         <div class="container">
@@ -68,7 +70,8 @@
 
     <!--scripts-->
     <script> https://code.jquery.com/jquery-3.3.1.min.js</script>
-    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/style.js' %}"></script>
+    {% comment %} <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script> {% endcomment %}
     <script type="text/javascript">
       M.AutoInit();
     </script>

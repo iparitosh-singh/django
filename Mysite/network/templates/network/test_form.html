@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>
+        Website Nigga
+    </title>
+</head>
+
+
+    <div class = "container">
+        <form   action="/login/" method="post">
+       {% csrf_token %}
+        <fieldset>
+             {{form_log}}
+        </fieldset>
+            <div class="controls">
+                <button class="waves-effect waves-light btn-small" type="submit" value = 'sign_in' class="btn">Login</button>
+            </div>
+        </div>
+        </form>
+<div class="container">
+<br>
+<br>
+<br>
+    <div class >
+    <form method = "POST">
+        {% csrf_token %}
+        <fieldset>
+             {{form_reg}}
+        </fieldset>
+        <div class = "form-group">
+            <button class="waves-effect waves-light btn-small" type = "submit" value = 'sign_up'><i class="material-icons right">send</i>sign up</button>
+        </div>
+    </form>
+</div>
+</div>
+</html>
