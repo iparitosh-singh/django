@@ -21,11 +21,17 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your email for registration</span>
+			{{ form_reg.errors }}
+			{{ form_reg.non_field_errors }}
+			{{ form_reg.username.error }}
 			{{ form_reg.username }}
+			{{ form_reg.email.error }}
 			{{ form_reg.email }}
+			{{ form_reg.password1.error}}
 			{{form_reg.password1}}
+			{{ form_reg.password2.error}}
 			{{form_reg.password2}}
-			<button type = "submit" value = 'sign_up'>Sign Up</button>
+			<button type = "submit" value = 'sign_up' name= "sign_up">Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -38,10 +44,14 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
+			{{ form_log.errors }}
+			{{ form_log.non_field_errors }}
+			{{ form_log.username.error}}
 			{{ form_log.username }}
+			{{ form_log.password.error}}
 			{{form_log.password}}
-			
-			<button type = "submit" value = 'sign_in'>Sign In</button>
+
+			<button type = "submit" value = 'sign_in' name= "sign_in">Sign In</button>
 			<a href="#">Forgot your password?</a>
 		</form>
 	</div>
@@ -64,10 +74,6 @@
 
 <script type="text/javascript" src="{% static 'js/style.js' %}"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" >
-    $(document).ready(function(){
-        $("#id_password1").attr('placeholder', '{{form_log.email.label}}');
-    });
-</script>
+
 </body>
 </html>
