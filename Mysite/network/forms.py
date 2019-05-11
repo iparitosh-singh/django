@@ -92,3 +92,13 @@ class Post_Create_Form(forms.Form):
     class Meta:
         model = Post
         fields = ['title','content', 'author', 'image']
+
+
+class Post_Form(forms.Form):
+    title = forms.CharField(widget = forms.TextInput(attrs = {'placeholder': 'Title'}))
+    content = forms.CharField(widget = forms.TextInput(attrs = {'placeholder': 'Content'}))
+    author = forms.CharField(widget = forms.TextInput(attrs = {'placeholder': 'Author'}))
+    image = forms.ImageField()
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'author', 'image']

@@ -32,6 +32,7 @@
             {% else%}
             <li><a class="waves-effect" href="{% url 'network:register'%}">Register</a></li>
             <li><a class="waves-effect" href="{% url 'network:login'%}">Login</a></li>
+            <li><a class="waves-effect" href="{% url 'network:test_view'%}">Testing</a></li>
             {% endif %}
         </ul>
     </div>
@@ -71,7 +72,7 @@
     <!--scripts-->
     <script> https://code.jquery.com/jquery-3.3.1.min.js</script>
     <script type="text/javascript" src="{% static 'js/style.js' %}"></script>
-    {% comment %} <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script> {% endcomment %}
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
     <script type="text/javascript">
       M.AutoInit();
     </script>

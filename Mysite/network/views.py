@@ -16,7 +16,8 @@ from .forms import(
     #UserRegistrationForm,
     Post_Create_Form, 
     UserLoginForm,
-    UserRegisterrationForm
+    UserRegisterrationForm,
+    Post_Form,
 )
 
 
@@ -144,4 +145,13 @@ def login_register(request):
         form_log = UserLoginForm()
     return render(request,"network/bothpage.html", {'form_reg': form_reg, 'form_log': form_log})
 
-
+class TestViewPost(LoginRequiredMixin, CreateView):
+     
+    if request.POST:
+        form_post = Post_Form(data = request.POST) 
+        if form_post.is_valid():
+            form_post.save()
+    else
+        form_post = Post_Form()
+    
+    return  render(request, "network/postcreate.html", context = 'form_post': form_post) 
