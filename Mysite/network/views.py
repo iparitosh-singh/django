@@ -12,7 +12,7 @@ from django.views.generic import (
     CreateView,
     DeleteView,
 )
-from .forms import( 
+from .forms import (
     #UserRegistrationForm,
     Post_Create_Form, 
     UserLoginForm,
@@ -58,7 +58,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             return True
 
 
-class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/'
     
@@ -111,18 +111,8 @@ class ProfileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 def login_register(request):
     if request.method == "POST":
         form_log = UserLoginForm(data=request.POST or None)
-        # form_reg = UserRegistrationForm(data=request.POST or None)
         form_reg = UserRegisterrationForm(request.POST)
         if 'sign_up' in request.POST:
-            # if form_reg.is_valid():
-            #     user = form_reg.save(commit=False)
-            #     password = form_reg.cleaned_data.get('password1')
-            #     user.set_password(password)
-            #     user.save()
-            #     login(request, user)
-            #     username = form_reg.cleaned_data.get('username')
-            #     messages.success(request, f'Your account have been registered!,{username}')
-            #     return redirect('network:homepage')
             if form_reg.is_valid():
                 user = form_reg.save()
                 username = form_reg.cleaned_data.get('username')
@@ -142,6 +132,6 @@ def login_register(request):
     else:
         form_reg = UserRegisterrationForm()
         form_log = UserLoginForm()
-    return render(request,"network/bothpage.html", {'form_reg': form_reg, 'form_log': form_log})
+    return render(request, "network/bothpage.html", {'form_reg': form_reg, 'form_log': form_log})
 
 
