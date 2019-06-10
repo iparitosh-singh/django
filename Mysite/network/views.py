@@ -110,16 +110,17 @@ class ProfileUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 def login_register(request):
     if request.method == "POST":
-        form_log = UserLoginForm(data=request.POST or None)
-        form_reg = UserRegisterrationForm(request.POST)
         if 'sign_up' in request.POST:
+            form_reg = UserRegisterrationForm(request.POST, prefix = 'banned')
             if form_reg.is_valid():
                 user = form_reg.save()
                 username = form_reg.cleaned_data.get('username')
                 login(request, user)
                 messages.success(request, f'Your account was created, with username: {username}')
                 return redirect('network:homepage')
+            form_log = UserLoginForm(prefix='expected')
         elif 'sign_in' in request.POST:
+            form_log = UserLoginForm(data=request.POST or None, prefix='banned')
             if form_log.is_valid():
                 username = form_log.cleaned_data.get('username')
                 password = form_log.cleaned_data.get('password')
@@ -128,6 +129,8 @@ def login_register(request):
                 if user is not None:
                     login(request, user)
                     return HttpResponseRedirect(reverse('network:homepage'))
+            form_reg = UserRegisterrationForm(prefix = 'expected')
+                
 
     else:
         form_reg = UserRegisterrationForm()
